@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Projects - Rahima Wali</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+<style>
+:root {
+  --dark-blue: #0c1733;
+  --gold: #bba738;
+  --ivory: #fffef5;
+}
+
+/* Projects Section */
+.projects-section {
+  padding: 80px 50px;
+  background: linear-gradient(135deg, var(--ivory) 0%, #f4f2ed 100%);
+}
+
+.projects-container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.projects-container h2 {
+  font-size: 3rem;
+  color: var(--dark-blue);
+  margin-bottom: 10px;
+}
+
+.projects-container h2 span {
+  color: var(--gold);
+}
+
+.projects-container p {
+  color: #3a425c;
+  margin-bottom: 50px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Grid Layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* Project Card */
+.project-card {
+  background: var(--ivory);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(12,23,51,0.1);
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+}
+
+.project-info {
+  padding: 20px;
+  text-align: left;
+}
+
+.project-info h3 {
+  font-size: 1.4rem;
+  color: var(--dark-blue);
+  margin-bottom: 10px;
+}
+
+.project-info p {
+  font-size: 0.95rem;
+  color: #3a425c;
+  margin-bottom: 15px;
+}
+
+/* Buttons inside cards */
+.btn_box {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 50px;
+  background: linear-gradient(135deg, var(--dark-blue));
+  box-shadow: 0 15px 40px rgba(12,23,51,0.5);
+  transition: all 0.4s ease, transform 0.3s ease, box-shadow 0.4s ease;
+}
+
+
+
+@media screen and (max-width: 950px){
+  .projects-container p {
+    font-size: 1rem;
+  }
+}
+</style>
+</head>
+<body>
+
+<section class="projects-section">
+  <div class="projects-container">
+    <h2>My <span>Projects</span></h2>
+    <p>Here’s a showcase of my professional work, including web development, graphic design, coding, and digital projects. Each project demonstrates creativity, technical skills, and attention to detail.</p>
+
+    <div class="projects-grid">
+      <!-- Project 1 -->
+      <div class="project-card">
+        <img src="1.jpg" alt="Web Design Project 1">
+        <div class="project-info">
+          <h3>Responsive Website</h3>
+          <p>Developed a modern responsive website using HTML, CSS, and JavaScript with clean layout and smooth UI.</p>
+          <a href="#" class="btn_box">View Project</a>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <img src="second.jpg" alt="Web Design Project 2">
+        <div class="project-info">
+          <h3>E-commerce Site</h3>
+          <p>Created an online shop layout with fully functional product pages and shopping cart integration.</p>
+          <a href="#" class="btn_box">View Project</a>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card">
+        <img src="third.jpg" alt="Graphic Design Project 1">
+        <div class="project-info">
+          <h3>Brand Logo</h3>
+          <p>Designed professional logos for multiple clients using Adobe Illustrator and Photoshop.</p>
+          <a href="#" class="btn_box">View Project</a>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project-card">
+        <img src="fourth.jpg" alt="Graphic Design Project 2">
+        <div class="project-info">
+          <h3>Poster Design</h3>
+          <p>Created visually appealing posters and brochures for promotional campaigns and events.</p>
+          <a href="#" class="btn_box">View Project</a>
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="project-card">
+        <img src="fifth.jpg" alt="Python Project 1">
+        <div class="project-info">
+          <h3>Python Automation</h3>
+          <p>Built Python scripts to automate repetitive tasks and improve workflow efficiency.</p>
+          <a href="#" class="btn_box">View Project</a>
+        </div>
+      </div>
+
+      <!-- Project 6 -->
+      <div class="project-card">
+        <img src="data.jpg" alt="Python Project 2">
+        <div class="project-info">
+          <h3>Data Analysis</h3>
+          <p>Developed Python applications for basic data analysis, visualization, and reporting.</p>
+          <a href="#" class="btn_box">View Project</a>
+        </div>
+      </div>
+
+      <!-- Project 7 -->
+      <div class="project-card">
+        <img src="sev.jpg" alt="Video Editing Project 1">
+        <div class="project-info">
+          <h3>Video Editing</h3>
+          <p>Edited promotional videos and tutorials using Adobe Premiere and Final Cut Pro.</p>
+          <a href="#" class="btn_box">View Project</a>
+        </div>
+      </div>
+
+      <!-- Project 8 -->
+      <div class="project-card">
+        <img src="eig.jpg" alt="Photography Project">
+        <div class="project-info">
+          <h3>Photography Portfolio</h3>
+          <p>Captured professional photos for events, portraits, and creative projects with strong composition.</p>
+          <a href="#" class="btn_box">View Project</a>
+        </div>
+      </div>
+
+      <!-- Project 9 -->
+      <div class="project-card">
+        <img src="ninth.jpg" alt="Web App Project">
+        <div class="project-info">
+          <h3>Web Application</h3>
+          <p>Developed a small web app using HTML, CSS, JavaScript, and Python backend for functionality demonstration.</p>
+          <a href="#" class="btn_box">View Project</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Back to main page -->
+<div style="text-align:center; margin: 40px 0;">
+  <a href="index.html" class="btn_box" style="--i:10;">Back to Main Page</a>
+</div>
+
+</body>
+</html>

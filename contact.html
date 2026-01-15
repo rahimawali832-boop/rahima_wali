@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Me - Rahima Wali</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --dark-blue: #0c1733;
+  --gold: #bba738;
+  --ivory: #fffef5;
+}
+
+/* Reset & Body */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--ivory);
+  color: var(--dark-blue);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contact Section */
+.contact-section {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  width: 90%;
+  background: var(--ivory);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+/* Left: Info + Social */
+.contact-info {
+  flex: 1 1 400px;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: slideFromTop 1s forwards;
+}
+
+.contact-info h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.contact-info h2 span {
+  color: var(--gold);
+}
+
+.contact-info p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  color: #2a2a2a;
+}
+
+/* Social Buttons Rows */
+.social-buttons-row {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+/* Advanced Button Style */
+.btn_box {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 45px;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 50px;
+  box-shadow: 0 15px 40px rgba(12,23,51,0.5);
+  position: relative;
+  overflow: hidden;
+
+  opacity: 0;
+  animation: SlideLeft 1s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
+  transition: all 0.4s ease, transform 0.3s ease, box-shadow 0.4s ease;
+}
+
+/* Shine effect */
+.btn_box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255,255,255,0.25), rgba(255,255,255,0));
+  transform: skewX(-25deg);
+  transition: all 0.5s ease;
+}
+
+.btn_box:hover::before {
+  left: 100%;
+}
+
+/* Hover effect */
+.btn_box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 60px rgba(12,23,51,0.7),
+              0 0 20px rgba(187,167,56,0.6);
+  background: linear-gradient(135deg, var(--gold), #ffd966);
+  color: var(--gold);
+}
+
+/* Icon inside button */
+.btn_box i {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.btn_box:hover i {
+  transform: translateY(-2px);
+}
+
+/* Slide animation keyframes */
+@keyframes SlideLeft {
+  0% { opacity: 0; transform: translateY(50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideFromTop {
+  0% { opacity: 0; transform: translateY(-50px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
+
+@keyframes slideFromBottom {
+  0% { opacity: 0; transform: translateY(50px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
+
+/* Right: Form */
+.contact-form {
+  flex: 1 1 400px;
+  background: var(--dark-blue);
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--ivory);
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideFromBottom 1s forwards;
+  animation-delay: 0.5s;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.05);
+  color: var(--ivory);
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+  border-color: var(--gold);
+}
+
+.contact-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contact-form .btn-submit {
+  padding: 15px;
+  border-radius: 8px;
+  border: none;
+  background: var(--gold);
+  color: var(--dark-blue);
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form .btn-submit:hover {
+  background: #a8952f;
+}
+
+/* Responsive */
+@media(max-width: 900px){
+  .contact-section {
+    flex-direction: column;
+  }
+  .social-buttons-row {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
+</style>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  
+<section class="contact-section">
+
+  <!-- Left: Info + Social Buttons -->
+  <div class="contact-info">
+    <h2>Contact <span>Me</span></h2>
+    <p>I am a passionate developer who loves creating clean, efficient, and professional projects. If you have a project or idea in mind, I am ready to collaborate and bring it to life with precision and expertise.</p>
+    
+    <!-- Social Buttons in two rows -->
+    <div class="social-buttons-row">
+      <a href="https://wa.me/93765478241" target="_blank" class="btn_box" style="--i:1; background:#0c1733;">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+      <a href="mailto:rahimawali832@gmail.com" target="_blank" class="btn_box" style="--i:2; background:#0c1733;">
+        <i class="fas fa-envelope"></i> Email
+      </a>
+    </div>
+    <div class="social-buttons-row">
+      <a href="https://x.com/rahima96876" target="_blank" class="btn_box" style="--i:3; background:#0c1733;">
+        <i class="fab fa-twitter"></i> Twitter
+      </a>
+      <a href="https://www.youtube.com/@Pixel_Nightmare1" target="_blank" class="btn_box" style="--i:4; background:#0c1733;">
+        <i class="fab fa-youtube"></i> YouTube
+      </a>
+    </div>
+  </div>
+
+  <!-- Right: Contact Form -->
+  <div class="contact-form">
+    <form action="">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <input type="text" placeholder="Subject">
+      <textarea placeholder="Your Message"></textarea>
+      <input type="submit" value="Send Message" class="btn-submit">
+    </form>
+  </div>
+
+</section>
+
+</body>
+</html>
